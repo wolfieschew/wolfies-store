@@ -1,0 +1,259 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+  --bgp: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bgp);
+  color: #fff;
+  min-height: 3000px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #513c28;
+  border-bottom: 1px solid #513c28;
+  position: fixed; /* saat di scroll tetap di atas */
+  top: 0; /* space mentok full */
+  left: 0;
+  right: 0;
+  z-index: 9999; /* nav agar stabil di atas */
+}
+
+/* mengatur logo "Wolfies Store" */
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* mengatur span */
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+/* mengatur navbar 1 a */
+.navbar .navbar-nav a {
+  color: #fff;
+  font-size: 1.3rem;
+  display: inline-block; /* agar nav a tetap di posisi awal tidak menurun */
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+
+/* mengatur nav ketika di hover */
+.navbar .navbar-nav a:hover {
+  color: #513c28;
+  transition: 0.5s;
+}
+
+/* mengatur icon */
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Content Section */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  text-shadow: 1px 0px 3px rgba(1, 1, 3, 0.3);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #b6895b;
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* Section About Tentang Kami */
+
+.about,
+.menu {
+  padding: 8rem 7% 1.4rem;
+  color: black;
+}
+
+.about h2,
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+/* product section */
+
+.menu {
+  color: black;
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+}
+
+.menu .row .menu-card img {
+  margin-top: 30px;
+  border-radius: 20%;
+  width: 50%;
+}
+
+.menu .row .menu-card-title {
+  margin: 1.5rem auto 0.5rem;
+}
+
+.menu .row .menu-card .menu-card-price {
+  margin-bottom: 10px;
+}
+
+.menu .row .menu-card .btn-menu {
+  color: white;
+  padding: 10px;
+  background-color: #e24a2c;
+  border-radius: 10px;
+}
+
+/* media quaries */
+/* Laptop Dan PC */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 794px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0%;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .content p,
+  .menu {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.3rem;
+  }
+}
+
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

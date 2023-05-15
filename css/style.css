@@ -13,11 +13,15 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bgp);
   color: #fff;
-  min-height: 3000px;
+  min-height: 2000px;
 }
 
 /* navbar */
@@ -103,7 +107,21 @@ body {
 .hero .content p {
   font-size: 1.5rem;
   margin-top: 1rem;
+  margin-bottom: 2.5rem;
   line-height: 1.4;
+}
+
+.hero .content .cta {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1.3rem;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero .content .cta:hover {
+  transition: 0.5s;
 }
 
 /* Section About Tentang Kami */
@@ -196,6 +214,48 @@ body {
   padding: 10px;
   background-color: #e24a2c;
   border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /* media quaries */
